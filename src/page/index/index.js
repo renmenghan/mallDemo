@@ -2,10 +2,17 @@
 * @Author: renmenghan
 * @Date:   2017-07-21 11:40:19
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-07-23 22:23:45
+* @Last Modified time: 2017-07-30 18:13:20
 */
 
 'use strict';
-require('./index.css')
-// $('body').html('hello 1');
-// console.log('hello index');
+require('page/common/header/index.js');
+require('page/common/nav/index.js');
+
+var navSide = require('page/common/nav-side/index.js');
+
+var _mm = require('util/mm.js');
+
+navSide.init({
+	name : 'order-list'
+});
