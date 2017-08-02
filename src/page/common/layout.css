@@ -2,7 +2,7 @@
 * @Author: ren522686239
 * @Date:   2017-07-26 18:36:16
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-07-26 21:00:25
+* @Last Modified time: 2017-07-31 18:19:54
 */
 
 /*css reset*/
@@ -38,6 +38,26 @@ input[type='checkbox']{
 	position: relative;
 	overflow: hidden;
 }
+/*pannel*/
+.panel {
+	padding: 10px;
+	margin-bottom:  10px;
+	background: #fff;
+}
+.panel .panel-title
+{
+	padding: 10px;
+	font-size: 14px;
+	color: #666;
+	font-weight: bold;
+	border-bottom: 1px solid #eee;
+}
+.panel .panel-body
+{
+	padding: 10px;
+	overflow: hidden;
+}
+
 /*全局通用样式*/
 
 /*隐藏类*/
@@ -90,3 +110,4 @@ input[type='checkbox']{
 	background:url(../../image/icon/loading.gif) no-repeat;
 	opacity: .6;
 }
+

@@ -2,7 +2,7 @@
 * @Author: ren522686239
 * @Date:   2017-07-26 21:06:38
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-07-27 11:58:06
+* @Last Modified time: 2017-07-31 14:30:56
 */
 
 'use strict';
@@ -24,7 +24,7 @@ var nav = {
 		});
 		// 注册点击事件
 		$('.js-register').click(function(){
-			window.location.hre = './register.html';
+			window.location.hre = './user-register.html';
 		});
 		// 退出点击事件
 		$('.js-logout').click(function(){
@@ -38,7 +38,7 @@ var nav = {
 	// 加载用户信息
 	loadUserInfo : function(){
 		_user.checkLogin(function(res){
-			$('.user.not-login').hide().siblings('.user.login').show().find('.user-name').text(res.username)
+			$('.user.not-login').hide().siblings('.user.login').show().find('.username').text(res.username);
 			},function(errMsg){
 
 			});

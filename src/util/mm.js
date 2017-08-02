@@ -2,7 +2,7 @@
 * @Author: ren522686239
 * @Date:   2017-07-24 11:10:52
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-07-26 21:50:45
+* @Last Modified time: 2017-07-30 22:15:53
 */
 
 'use strict';
@@ -82,7 +82,7 @@ var _mm = {
         }
     },
 	doLogin :function(){
-		window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+		window.location.href = './user-login.html?redirect=' + encodeURIComponent(window.location.href);
 	},
     goHome :function(){
         window.location.href = './index.html';

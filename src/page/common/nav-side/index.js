@@ -2,7 +2,7 @@
 * @Author: ren522686239
 * @Date:   2017-07-27 13:37:30
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-07-30 17:36:43
+* @Last Modified time: 2017-08-02 20:53:56
 */
 
 'use strict';
@@ -16,7 +16,7 @@ var navSide = {
 		navList : [
 		{name : 'user-center', desc:'个人中心',href:'./user-center.html'},
 		{name : 'order-list', desc:'我的订单',href:'./order-list.html'},
-		{name : 'pass-update', desc:'修改密码',href:'./pass-update.html'},
+		{name : 'user-pass-update', desc:'修改密码',href:'./user-pass-update.html'},
 		{name : 'about', desc:'关于MMALl',href:'./about.html'}
 		],
 	},
@@ -35,7 +35,7 @@ var navSide = {
 			}
 		};
 		// 渲染数据
-		var navHtml= _mm.renderHtml(templateIndex,{
+		var navHtml = _mm.renderHtml(templateIndex,{
 			navList : this.option.navList
 		});
 		// 吧html防区容器
