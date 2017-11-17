@@ -2,7 +2,7 @@
 * @Author: ren522686239
 * @Date:   2017-07-27 11:21:30
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-07-27 11:55:03
+* @Last Modified time: 2017-11-05 18:41:57
 */
 
 'use strict';
@@ -12,6 +12,7 @@ var _mm = require('util/mm.js');
 // 通用页面导航
 var header = {
 	init : function(){
+		this.onLoad();
 		this.bindEvent();
 	},
 	onLoad : function(){

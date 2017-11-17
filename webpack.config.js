@@ -2,7 +2,7 @@
 * @Author: renmenghan
 * @Date:   2017-07-21 11:47:23
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-08-02 20:36:45
+* @Last Modified time: 2017-11-05 18:05:22
 */
 
 var webpack             = require('webpack');
@@ -25,7 +25,9 @@ var getHtmlConfig = function(name,title){
 var config = {
      entry: {
         'common'                    : ['./src/page/common/index.js'],
-     	'index'                     : ['./src/page/index/index.js'],
+        'index'                     : ['./src/page/index/index.js'],
+        'list'                      : ['./src/page/list/index.js'],
+     	'detail'                    : ['./src/page/detail/index.js'],
         'user-login'                : ['./src/page/user-login/index.js'],
         'user-register'             : ['./src/page/user-register/index.js'],
         'user-pass-reset'           : ['./src/page/user-pass-reset/index.js'],
@@ -69,6 +71,8 @@ var config = {
         new ExtractTextPlugin("css/[name].css"),
         // 对html模板的处理
         new HtmlWebpackPlugin(getHtmlConfig('index','首页')),
+        new HtmlWebpackPlugin(getHtmlConfig('list','商品列表页')),
+        new HtmlWebpackPlugin(getHtmlConfig('detail','商品详情页')),
         new HtmlWebpackPlugin(getHtmlConfig('user-login','用户登录')),
         new HtmlWebpackPlugin(getHtmlConfig('user-register','用户注册')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-reset','找回密码')),
