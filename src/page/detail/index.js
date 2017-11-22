@@ -48,8 +48,8 @@ var page	=	{
 		// 加入购物车
 		$(document).on('click','.cart-add',function(){
 			_cart.addToCart({
-				productId : _this.data.listParam.productId,
-				count: $('.p-count').val()
+				productId 	: _this.data.listParam.productId,
+				count 		: $('.p-count').val()
 			},function(res){
 				window.location.href = './result.html?type=cart-add';
 			},function(errMsg){
