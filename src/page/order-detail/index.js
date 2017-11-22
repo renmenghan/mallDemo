@@ -2,7 +2,7 @@
 * @Author: ren522686239
 * @Date:   2017-11-21 23:32:54
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-11-22 00:19:22
+* @Last Modified time: 2017-11-22 11:21:16
 */
 'use strict';
 require('./index.css');
@@ -75,6 +75,5 @@ var page = {
 }
 
 $(function(){
-
 	page.init();
 });
