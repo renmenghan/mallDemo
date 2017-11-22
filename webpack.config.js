@@ -2,7 +2,7 @@
 * @Author: renmenghan
 * @Date:   2017-07-21 11:47:23
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-11-22 11:20:09
+* @Last Modified time: 2017-11-22 16:47:09
 */
 
 var webpack             = require('webpack');
@@ -15,6 +15,7 @@ var getHtmlConfig = function(name,title){
     return {
         template    : './src/view/' + name + '.html',
         filename    : 'view/' + name + '.html',
+        favicon     : './favicon.ico',
         title       : title,
         inject      : true,
         hash        : true,
@@ -39,11 +40,12 @@ var config = {
         'user-center'               : ['./src/page/user-center/index.js'],
         'user-center-update'        : ['./src/page/user-center-update/index.js'],
      	'user-pass-update'          : ['./src/page/user-pass-update/index.js'],
-        'result'                    : ['./src/page/result/index.js']
+        'result'                    : ['./src/page/result/index.js'],
+        'about'                     : ['./src/page/about/index.js']
      },
      output: {
-         path: './dist',
-         publicPath:'/dist',
+         path: __dirname + '/dist',
+         publicPath  : 'dev' === WEBPACK_ENV ? '/dist/' : '//s.happymmall.com/mmall-fa/dist/',
          filename: 'js/[name].js'
      },
      externals : {
@@ -53,7 +55,14 @@ var config = {
         loaders:  [
             {test: /\.css$/,loader:  ExtractTextPlugin.extract("style-loader","css-loader")},
             {test: /\.(gif|png|jpg|woff|svg|eot|ttf)\??.*$/,loader:'url-loader?limit=100&name=resource/[name].[ext]'},
-            {test: /\.string$/,loader: 'html-loader'}
+            {
+                test: /\.string$/,
+                loader: 'html-loader',
+                qury:{
+                    minimize : true,
+                    removeAttributeQuotes:false
+                }
+            }
         ]
     },
     resolve : {
@@ -90,6 +99,7 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update','个人中心修改')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('about','关于mmall')),
      ]
  };
 if ('dev' === WEBPACK_ENV) {
