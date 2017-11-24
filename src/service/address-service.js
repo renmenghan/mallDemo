@@ -2,7 +2,7 @@
 * @Author: ren522686239
 * @Date:   2017-11-20 21:45:13
 * @Last Modified by:   ren522686239
-* @Last Modified time: 2017-11-21 20:48:50
+* @Last Modified time: 2017-11-24 16:19:23
 */
 'use strict';
 var _mm = require('util/mm.js');
@@ -19,6 +19,7 @@ var _address = {
 			error	: reject
 		});
 	},
+	// 保存收件人
 	save : function(addressInfo,resolve,reject){
 		_mm.request({
 			url 	: _mm.getServerUrl('/shipping/add.do'),
